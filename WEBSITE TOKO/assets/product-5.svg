@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="prod5Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#f6fff2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbfff8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="12" fill="#fff"/>
+  <rect y="0" width="600" height="220" fill="url(#prod5Grad)"/>
+  
+  <!-- ChatGPT icon representation -->
+  <circle cx="300" cy="110" r="50" fill="#10A37F"/>
+  <path d="M 280 100 L 290 120 L 310 120 L 320 100 L 310 80 L 290 80 Z" 
+        fill="#fff" opacity="0.9"/>
+  <circle cx="300" cy="110" r="8" fill="#10A37F"/>
+  
+  <text x="20" y="280" font-family="Inter, sans-serif" font-size="26" fill="#09323f" font-weight="700">ChatGPT Plus</text>
+  <text x="20" y="320" font-family="Inter, sans-serif" font-size="16" fill="#6b8596">AI Assistant Premium</text>
+</svg>

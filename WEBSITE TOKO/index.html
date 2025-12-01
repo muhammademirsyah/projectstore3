@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1200, initial-scale=0.3, maximum-scale=1.0, user-scalable=yes" />
+  <title>Ghaniyy Store - Layanan Akademik & Digital Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css" />
+</head>
+<body>
+  <!-- WELCOME SPLASH SCREEN -->
+  <div id="welcomeScreen" class="welcome-screen">
+    <div class="welcome-content">
+      <img src="assets/logo1.png" alt="Ghaniyy Store" class="welcome-logo">
+      <h1 class="welcome-title">Selamat Datang di</h1>
+      <h2 class="welcome-brand">Ghaniyy Store</h2>
+      <p class="welcome-subtitle">Website Resmi Layanan Akademik & Digital Premium</p>
+      <button id="enterWebsite" class="welcome-btn">
+        <span>✨</span> Masuk Website <span>✨</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="assets/logo1.png" alt="Ghaniyy Store" class="logo-img"/>
+        <span class="brand-text">Ghaniyy Store</span>
+      </a>
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span>☰</span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#produk">Aplikasi Premium</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <div class="header-actions">
+        <input id="search" class="search" placeholder="Cari layanan atau produk..." />
+        <a id="wa-contact" class="btn btn-primary" target="_blank" href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / HOME -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="home-content">
+        <div class="logo-section">
+          <img src="assets/logo1.png" alt="Ghaniyy Store Logo" class="main-logo"/>
+          <h1 class="store-name">Ghaniyy Store</h1>
+          <p class="store-tagline">Layanan Akademik & Digital Premium</p>
+        </div>
+        
+        <div class="about-home">
+          <h2>Tentang Kami</h2>
+          <p>
+            <strong>Ghaniyy Store</strong> merupakan penyedia layanan digital yang menghadirkan berbagai kebutuhan akademik maupun hiburan. 
+            Kami menyediakan <strong>Cek Turnitin</strong>, <strong>Jasa Parafrase</strong>, <strong>Publish Jurnal</strong>, 
+            <strong>Perbaikan Naskah</strong>, serta berbagai <strong>aplikasi premium</strong> dengan harga terjangkau dan pelayanan terpercaya.
+          </p>
+          
+          <div class="home-stats">
+            <div class="home-stat">
+              <span class="stat-number" data-target="300">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Pelanggan</span>
+            </div>
+            <div class="home-stat">
+              <span class="stat-number">4.9/5</span>
+              <span class="stat-label">Rating</span>
+            </div>
+            <div class="home-stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support</span>
+            </div>
+          </div>
+          
+          <a href="#layanan" class="btn-home">Lihat Layanan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN AKADEMIK -->
+  <section id="layanan" class="section-layanan">
+    <div class="container">
+      <div class="section-head">
+        <h2>Layanan Akademik</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="layanan-grid">
+        <div class="layanan-card" onclick="orderTurnitin()">
+          <img src="assets/turnitin.jpg" alt="Turnitin" class="layanan-icon-img">
+          <h3>Cek Turnitin</h3>
+          <p>Pengecekan plagiarisme profesional dengan Turnitin original</p>
+        </div>
+
+        <div class="layanan-card" onclick="orderParafrase()">
+          <div class="layanan-icon">✍️</div>
+          <h3>Jasa Parafrase</h3>
+          <p>Parafrase akademik profesional untuk turunkan similarity</p>
+        </div>
+
+        <div class="layanan-card" onclick="orderJurnal()">
+          <div class="layanan-icon">🎓</div>
+          <h3>Publish Jurnal</h3>
+          <p>Bantuan publikasi jurnal nasional dan internasional</p>
+        </div>
+
+        <div class="layanan-card" onclick="orderNaskah()">
+          <div class="layanan-icon">📝</div>
+          <h3>Perbaikan Naskah</h3>
+          <p>Perbaikan daftar isi, pustaka, margin, dan formatting</p>
+        </div>
+
+        <div class="layanan-card" onclick="orderPowerPoint()">
+          <div class="layanan-icon">📊</div>
+          <h3>Pembuatan PowerPoint</h3>
+          <p>Desain presentasi PowerPoint profesional dan menarik</p>
+        </div>
+
+        <div class="layanan-card" onclick="orderCustom()">
+          <div class="layanan-icon">💬</div>
+          <h3>Request Layanan Lain</h3>
+          <p>Punya kebutuhan khusus? Sampaikan request Anda</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN DIGITAL PREMIUM -->
+  <section id="produk" class="section-apps">
+    <div class="container">
+      <div class="section-head">
+        <h2>Aplikasi Digital Premium</h2>
+        <div class="section-divider"></div>
+      </div>
+      
+      <div class="digital-service-container">
+        <button class="digital-toggle" onclick="toggleDigitalApps()">
+          <span>Daftar Aplikasi Premium</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+        
+        <div class="digital-apps-list" id="digitalAppsList">
+          <div class="app-item" onclick="orderApp('Canva Pro')">
+            <img src="assets/canva.jpeg" alt="Canva" class="app-logo">
+            <div class="app-info">
+              <h4>Canva Pro</h4>
+              <p>Design tools profesional</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('CapCut Pro')">
+            <img src="assets/capcut.jpeg" alt="CapCut" class="app-logo">
+            <div class="app-info">
+              <h4>CapCut Pro</h4>
+              <p>Video editing canggih</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('Netflix Premium')">
+            <img src="assets/neftlix.jpeg" alt="Netflix" class="app-logo">
+            <div class="app-info">
+              <h4>Netflix Premium</h4>
+              <p>Akses unlimited film & series</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('Spotify Premium')">
+            <img src="assets/sptify.jpeg" alt="Spotify" class="app-logo">
+            <div class="app-info">
+              <h4>Spotify Premium</h4>
+              <p>Musik tanpa iklan & offline</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('YouTube Premium')">
+            <img src="assets/youtube.jpeg" alt="YouTube" class="app-logo">
+            <div class="app-info">
+              <h4>YouTube Premium</h4>
+              <p>Tanpa iklan & background play</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('Disney+ Hotstar')">
+            <img src="assets/disney.jpeg" alt="Disney+" class="app-logo">
+            <div class="app-info">
+              <h4>Disney+ Hotstar</h4>
+              <p>Film, series, & sports streaming</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('QuillBot Premium')">
+            <img src="assets/quillbot.jpeg" alt="QuillBot" class="app-logo">
+            <div class="app-info">
+              <h4>QuillBot Premium</h4>
+              <p>Parafrase otomatis cerdas</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('ChatGPT Plus')">
+            <img src="assets/chatgpt.jpeg" alt="ChatGPT" class="app-logo">
+            <div class="app-info">
+              <h4>ChatGPT Plus</h4>
+              <p>AI assistant terkini</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('Prime Video')">
+            <img src="assets/primevideo.jpeg" alt="Prime Video" class="app-logo">
+            <div class="app-info">
+              <h4>Prime Video</h4>
+              <p>Amazon streaming content</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('DeepL Pro')">
+            <img src="assets/deepl.jpeg" alt="DeepL" class="app-logo">
+            <div class="app-info">
+              <h4>DeepL Pro</h4>
+              <p>Translator AI terbaik</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('Picsart Gold')">
+            <img src="assets/picsart.jpeg" alt="Picsart" class="app-logo">
+            <div class="app-info">
+              <h4>Picsart Gold</h4>
+              <p>Photo & video editor</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('Viu Premium')">
+            <img src="assets/viu.jpeg" alt="Viu" class="app-logo">
+            <div class="app-info">
+              <h4>Viu Premium</h4>
+              <p>Drama Asia terlengkap</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('iFlix Premium')">
+            <img src="assets/iflix.jpeg" alt="iFlix" class="app-logo">
+            <div class="app-info">
+              <h4>iFlix Premium</h4>
+              <p>Konten Asia eksklusif</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderApp('Gamma App')">
+            <img src="assets/gamma.jpeg" alt="Gamma" class="app-logo">
+            <div class="app-info">
+              <h4>Gamma App</h4>
+              <p>AI presentation maker</p>
+            </div>
+          </div>
+          
+          <div class="app-item" onclick="orderCustomApp()">
+            <img src="assets/logo1.png" alt="Custom" class="app-logo">
+            <div class="app-info">
+              <h4>Aplikasi Lainnya</h4>
+              <p>Tanyakan kebutuhan Anda</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section id="disclaimer" class="section-disclaimer">
+    <div class="container">
+      <div class="disclaimer-content">
+        <div class="disclaimer-icon">ℹ️</div>
+        <div class="disclaimer-text">
+          <h3>Disclaimer</h3>
+          <p>Ghaniyy Store telah melayani pelanggan setia sejak tahun 2022. Kami berkomitmen memberikan layanan akademik dan digital premium terbaik dengan harga terjangkau. Kepercayaan Anda adalah prioritas kami.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak" class="container section">
+    <div class="contact-box">
+      <h2>Hubungi Kami</h2>
+      <p>Punya pertanyaan atau mau order? Langsung chat admin untuk respon cepat!</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <a href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store" target="_blank">
+            <img src="assets/whatsapp.jfif" alt="WhatsApp" class="contact-icon-img">
+          </a>
+          <div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-value">0895-3746-51500</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <a href="https://www.instagram.com/ghaniyystore.official?igsh=dGpvbXdjb3ZzbmF2" target="_blank">
+            <img src="assets/Instagram.png" alt="Instagram" class="contact-icon-img">
+          </a>
+          <div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-value">@ghaniyystore.official</div>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-lg" href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store" target="_blank">Chat Admin Sekarang</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Ghaniyy Store</h4>
+          <p>Penyedia layanan akademik dan digital premium terpercaya sejak 2022.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#layanan">Cek Turnitin</a></li>
+            <li><a href="#layanan">Parafrase</a></li>
+            <li><a href="#layanan">Perbaikan Naskah</a></li>
+            <li><a href="#layanan">Publish Jurnal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Produk</h4>
+          <ul>
+            <li><a href="#produk">Aplikasi Premium</a></li>
+            <li><a href="#produk">Akun Hiburan</a></li>
+            <li><a href="#produk">Software Kreatif</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <ul>
+            <li><a href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store" target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/ghaniyystore.official?igsh=dGpvbXdjb3ZzbmF2" target="_blank">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="https://wa.me/628999123944?text=Halo,%20saya%20tertarik%20untuk%20kerjasama%20dan%20kolaborasi" class="collab-btn" target="_blank">
+          <span class="collab-icon">🤝</span> Kerjasama & Kolaborasi
+        </a>
+        <p>&copy; <span id="year"></span> Ghaniyy Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/products.js"></script>
+  <script src="src/js/app.js"></script>
+
+</body>
+</html>
